@@ -431,22 +431,26 @@ img:hover {
     gap: 60px;
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.contact-item img {
-    width: 40px; /* Set width of the icon */
-    height: 40px; /* Set height of the icon */
+.contact-icon {
+    width: 50px; /* Size of the circle */
+    height: 50px; /* Size of the circle */
+    border-radius: 50%; /* Make it a circle */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Background color/gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 15px; /* Space between icon and text */
+}
+
+.contact-icon img {
+    width: 60%; /* Size relative to the circle */
+    height: 60%; /* Size relative to the circle */
     object-fit: contain; /* Ensure the image fits within the dimensions */
 }
 
