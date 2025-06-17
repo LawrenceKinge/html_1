@@ -530,14 +530,12 @@ img:hover {
 .social-links a {
     /* Make the link a block/flex container with fixed size */
     display: inline-flex; /* Use inline-flex to keep them in a row */
-    width: 40px; /* Set the size of the circle */
-    height: 40px; /* Set the size of the circle */
-    border-radius: 50%; /* Make it a circle */
+    border-radius: 1%; /* Make it a circle */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Add a background */
-    margin: 0 5px; /* Add some spacing between icons */
+    margin: 0 9px; /* Add some spacing between icons */
     align-items: center; /* Center the image vertically */
     justify-content: center; /* Center the image horizontally */
-    overflow: hidden; /* Crucial to clip the image to the circle */
+    overflow: clip; /* Crucial to clip the image to the circle */
     text-decoration: none; /* Remove underline if present */
     /* Remove icon-specific styles if they exist */
     /* color: white; */
@@ -545,10 +543,10 @@ img:hover {
 }
 
 .social-links a img {
-    display: block; /* Remove extra space below the image */
-    max-width: 100%; /* Ensure image doesn't exceed container width */
-    max-height: 100%; /* Ensure image doesn't exceed container height */
-    object-fit: contain; /* Scale image to fit inside the circle without cropping */
+    display: inline-block; /* Remove extra space below the image */
+    max-width: fit-content; /* Ensure image doesn't exceed container width */
+    max-height: fit-content; /* Ensure image doesn't exceed container height */
+    object-fit: scale-down; /* Scale image to fit inside the circle without cropping */
     /* object-fit: cover; /* Use cover if you want the image to fill the circle, potentially cropping */
 
     /* Alternative for icons: set a percentage size */
@@ -557,8 +555,7 @@ img:hover {
 }
 
 .social-links a:hover {
-    background: #fcd0ff;
-    transform: translateY(-1px);
+    background: #ffffff;
 }
 
 .footer-links {
